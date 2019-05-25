@@ -151,9 +151,6 @@ instructions:
 $> git clone https://github.com/azadkuh/qhttp.git
 $> cd qhttp
 
-# prepare dependencies:
-$qhttp/> ./update-dependencies.sh
-
 # now build the library and the examples
 $qhttp/> qmake -r qhttp.pro
 $qhttp/> make -j 8
@@ -184,7 +181,7 @@ in some rare scenarios you may want to use multiple handler threads (although
 `qhttpserver*` and client classes by `qhttpclient*`.
   - **`private/`**: Private classes of the library.
 - **`3rdparty/`**: will contain `http-parser` source tree as the only
-dependency.  this directory is created by setup. see also: [setup](#setup).
+dependency. This dependency was added with git subtree squashed commit.
 - **`example/`**: contains some sample applications representing the `QHttp`
 usage:
   - **`helloworld/`**: the HelloWorld example of `QHttp`, both server + client
